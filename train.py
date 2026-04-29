@@ -105,8 +105,8 @@ class CausalSelfAttention(nn.Module):
 class MLP(nn.Module):
     def __init__(self, config):
         super().__init__()
-        self.c_fc = nn.Linear(config.n_embd, 4 * config.n_embd, bias=False)
-        self.c_proj = nn.Linear(4 * config.n_embd, config.n_embd, bias=False)
+        self.c_fc = nn.Linear(config.n_embd, 3 * config.n_embd, bias=False)
+        self.c_proj = nn.Linear(3 * config.n_embd, config.n_embd, bias=False)
 
     def __call__(self, x):
         x = self.c_fc(x)
@@ -206,7 +206,6 @@ class GPT(nn.Module):
         x = norm(x)
 
         logits = self.lm_head(x).astype(mx.float32)
-        logits = 15.0 * mx.tanh(logits / 15.0)
 
         if targets is None:
             return logits
@@ -365,7 +364,7 @@ TOTAL_BATCH_SIZE = 2**16
 EMBEDDING_LR = 0.6
 UNEMBEDDING_LR = 0.004
 MATRIX_LR = 0.04
-SCALAR_LR = 0.5
+SCALAR_LR = 0.25
 WEIGHT_DECAY = 0.2
 ADAM_BETAS = (0.8, 0.95)
 WARMUP_RATIO = 0.0
