@@ -1,2 +1,3 @@
 commit	val_bpb	memory_gb	status	description
 730c429	2.390535	21.2	keep	baseline (AdamW, default config, M4 Mac Mini 32GB)
+f597b58	2.356641	20.2	keep	smaller MLP, 4x -> 3x n_embd
