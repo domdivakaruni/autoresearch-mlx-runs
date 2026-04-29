@@ -110,7 +110,7 @@ class MLP(nn.Module):
 
     def __call__(self, x):
         x = self.c_fc(x)
-        x = mx.maximum(x, 0) ** 2
+        x = x * mx.sigmoid(x)
         return self.c_proj(x)
 
 
@@ -372,7 +372,7 @@ WARMDOWN_RATIO = 0.5
 FINAL_LR_FRAC = 0.0
 
 # Model size
-DEPTH = 5
+DEPTH = 4
 DEVICE_BATCH_SIZE = 16
 FINAL_EVAL_BATCH_SIZE = 256
 STARTUP_EXCLUDE_STEPS = 1
