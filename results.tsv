@@ -3,3 +3,4 @@ commit	val_bpb	memory_gb	status	description
 f597b58	2.356641	20.2	keep	smaller MLP, 4x -> 3x n_embd
 3ae14ac	2.166266	20.7	keep	remove logit cap (15*tanh(x/15))
 9db76b3	2.092863	20.7	keep	lower SCALAR_LR 0.5 -> 0.25
+6ab0801	2.112233	20.7	discard	DEVICE_BATCH_SIZE 16 -> 32 (no grad accum)
