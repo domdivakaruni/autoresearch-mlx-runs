@@ -14,3 +14,4 @@ d7ee733	2.060207	22.2	keep	SiLU activation (replace squared ReLU)
 378a4e1	2.055322	21.2	keep	smaller MLP, 3x -> 2x n_embd
 9b91414	2.096963	21.2	discard	WARMDOWN_RATIO 0.5 -> 0.3 (less anneal)
 0f6d61b	2.176529	21.2	discard	ADAM_BETAS beta1 0.8 -> 0.9
+f420588	2.093585	21.2	discard	EMBEDDING_LR 0.6 -> 0.4 (lower)
