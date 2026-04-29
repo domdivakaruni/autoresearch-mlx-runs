@@ -11,3 +11,4 @@ bd12d14	2.117663	20.7	discard	MATRIX_LR 0.04 -> 0.05 (push LR up)
 84d03b1	2.213933	20.7	discard	DEPTH 4 -> 3 (smaller model, more steps)
 0cabea1	2.342132	23.1	discard	DEPTH 4 -> 5 (more layers, also wider via ASPECT_RATIO)
 d7ee733	2.060207	22.2	keep	SiLU activation (replace squared ReLU)
+378a4e1	2.055322	21.2	keep	smaller MLP, 3x -> 2x n_embd
