@@ -7,3 +7,4 @@ f597b58	2.356641	20.2	keep	smaller MLP, 4x -> 3x n_embd
 93eb9ae	2.266452	20.7	discard	WARMDOWN_RATIO 0.5 -> 0.7 (longer anneal)
 bc8aa45	2.176665	20.7	discard	WEIGHT_DECAY 0.2 -> 0.1 (lower regularization)
 bd12d14	2.117663	20.7	discard	MATRIX_LR 0.04 -> 0.05 (push LR up)
+6cfad84	2.196019	20.7	discard	MATRIX_LR 0.04 -> 0.03 (push LR down)
